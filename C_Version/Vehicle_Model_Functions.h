@@ -1,7 +1,7 @@
 //
 // Created by localuser on 3/10/2021.
 //
-
+#include "CAN-Functions.h"
 #ifndef C_VERSION_VEHICLE_MODEL_FUNCTIONS_H
 #define C_VERSION_VEHICLE_MODEL_FUNCTIONS_H
 
@@ -40,6 +40,16 @@ float j = 0;
 float k = 0;
 float z = [0];
 
+float vehicle_model_speed(accelerator_pedal_position,){
+    int app_mult = 1; // Resolution from J1939
+    int app_b = -125; //Offset from J1939
+    char arb_id[4];
+    char data[8];
+    bool waiting = True;
+    while(waiting){
+        can_receive(channel, arb_id, dlc, data);
 
+        }
+}
 
 
